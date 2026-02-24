@@ -1,0 +1,18 @@
+services:
+  fin1:
+    build: .
+    container_name: fin1
+    restart: unless-stopped
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fin1.rule=Host(`fin1.freetimbat.ru`)"
+      - "traefik.http.routers.fin1.entrypoints=websecure"
+      - "traefik.http.routers.fin1.tls=true"
+      - "traefik.http.routers.fin1.tls.certresolver=le"
+      - "traefik.http.services.fin1.loadbalancer.server.port=80"
+
+networks:
+  web:
+    external: true

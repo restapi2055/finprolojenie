@@ -1,0 +1,3 @@
+# finprolojenie
+
+Initial repository setup.

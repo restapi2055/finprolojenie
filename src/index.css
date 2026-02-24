@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 30% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 245 30% 14%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 245 30% 14%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 245 80% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 245 25% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 240 20% 18%;
+    --muted-foreground: 240 15% 55%;
+
+    --accent: 245 80% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 245 80% 65%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 43 96% 56%;
+    --warning-foreground: 30 40% 12%;
+
+    --coin: 45 100% 60%;
+    --coin-foreground: 45 100% 60%;
+
+    --border: 245 20% 20%;
+    --input: 245 20% 20%;
+    --ring: 245 80% 65%;
+
+    --radius: 1rem;
+
+    --shadow-card: 0 2px 16px -2px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 6px 24px -4px hsl(0 0% 0% / 0.4);
+    --shadow-button: 0 4px 16px -4px hsl(245 80% 65% / 0.35);
+    --shadow-coin: 0 2px 12px hsl(40 90% 45% / 0.3);
+
+    --sidebar-background: 245 30% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 245 80% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 245 25% 18%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 245 20% 20%;
+    --sidebar-ring: 245 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    color: hsl(var(--primary));
+  }
+
+  .text-gradient-accent {
+    color: hsl(var(--primary));
+  }
+
+  .bg-gradient-primary {
+    background: hsl(var(--primary));
+  }
+
+  .bg-gradient-accent {
+    background: hsl(var(--primary));
+  }
+
+  .bg-gradient-fun {
+    background: hsl(var(--primary));
+  }
+
+  .bg-gradient-success {
+    background: hsl(var(--primary));
+  }
+
+  .bg-gradient-hero {
+    background: hsl(245, 60%, 18%);
+  }
+
+  .bg-gradient-warm {
+    background: hsl(var(--primary));
+  }
+
+  .bg-gradient-card {
+    background: hsl(var(--card));
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+
+  .shadow-coin {
+    box-shadow: var(--shadow-coin);
+  }
+
+  .glass {
+    background: hsl(245, 60%, 18%);
+  }
+
+  .glass-light {
+    background: hsl(30, 30%, 95%);
+  }
+
+  .glass-subtle {
+    background: hsl(245 30% 14% / 0.6);
+  }
+
+  .glass-card {
+    background: hsl(245 30% 14% / 0.8);
+    border: 1px solid hsl(245 20% 25% / 0.4);
+  }
+
+  .glass-dark {
+    background: hsl(240 30% 8% / 0.9);
+    border: 1px solid hsl(245 20% 25% / 0.5);
+  }
+
+  .page-gradient {
+    background: hsl(30 30% 95%);
+    min-height: 100vh;
+  }
+
+  .purple-input {
+    background: hsl(0 0% 100%);
+    border: 1px solid hsl(220 20% 88%);
+    color: hsl(220 30% 15%);
+  }
+}
